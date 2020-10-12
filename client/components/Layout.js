@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 
 const links = [
     { text: 'Home', link: '/' },
-    { text: 'About', link: 'about' },
+    { text: 'About', link: '/about' },
     { text: 'Todos', link: '/todos' },
 ];
 

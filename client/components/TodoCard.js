@@ -1,6 +1,7 @@
 import styles from '../styles/TodoCard.module.css';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import Link from 'next/link';
 
 const TodoCard = ({ todo, mark }) => {
     const displayTitle = () => {
@@ -38,15 +39,18 @@ const TodoCard = ({ todo, mark }) => {
                         marginTop: '10px',
                     }}
                 >
-                    <div>
-                        <Button
-                            size="small"
-                            variant="contained"
-                            color="primary"
-                        >
-                            see detailed
-                        </Button>
-                    </div>
+                    <Link href={`/todos/${todo.id}`}>
+                        <div>
+                            <Button
+                                size="small"
+                                variant="contained"
+                                color="primary"
+                            >
+                                see detailed
+                            </Button>
+                        </div>
+                    </Link>
+
                     <div>{renderComplete()}</div>
                 </div>
             </div>

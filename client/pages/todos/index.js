@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Layout from '../../components/Layout';
 import axios from 'axios';
 import TodoCard from '../../components/TodoCard';
+import Loading from '../../components/Loading';
 
 const todos = (props) => {
     const [todos, setTodos] = useState([]);
@@ -26,6 +27,7 @@ const todos = (props) => {
         setTodos(clone);
     };
     const renderTodos = () => {
+        if (todos.length === 0) return <Loading></Loading>;
         const todoList = todos.map((todo) => {
             return (
                 <TodoCard
