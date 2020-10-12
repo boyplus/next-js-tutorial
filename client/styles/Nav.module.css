@@ -1,0 +1,20 @@
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #709fb0;
+    display: flex;
+}
+
+.link {
+    padding: 20px;
+    color: whitesmoke;
+    transition: 0.25s;
+}
+
+.link:hover{
+    color: white;
+    background-color: #518396;
+    cursor: pointer;
+    transition: 0.25s;
+}
